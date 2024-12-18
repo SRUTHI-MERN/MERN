@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Large Table</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        table {
+            width: 90%;
+            max-width: 1200px;
+            border-collapse: collapse;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+        }
+
+        th {
+            background-color: #6a11cb;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+
+        td {
+            border-bottom: 1px solid #ddd;
+        }
+
+        td:last-child {
+            border-right: none;
+        }
+
+        th:first-child, td:first-child {
+            border-left: none;
+        }
+
+        th:last-child, td:last-child {
+            border-right: none;
+        }
+
+        .container {
+            width: 100%;
+            overflow-x: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .table-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+            font-weight: 600;
+            color: #6a11cb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="table-title">A Data Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>28</td>
+                    <td>USA</td>
+                    <td>Developer</td>
+                    <td>$95,000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>32</td>
+                    <td>Canada</td>
+                    <td>Designer</td>
+                    <td>$85,000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Michael Brown</td>
+                    <td>27</td>
+                    <td>UK</td>
+                    <td>Manager</td>
+                    <td>$120,000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Amy Lee</td>
+                    <td>25</td>
+                    <td>Australia</td>
+                    <td>QA Engineer</td>
+                    <td>$75,000</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>David Kim</td>
+                    <td>30</td>
+                    <td>South Korea</td>
+                    <td>Data Scientist</td>
+                    <td>$110,000</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Olivia Johnson</td>
+                    <td>35</td>
+                    <td>USA</td>
+                    <td>Product Owner</td>
+                    <td>$130,000</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Daniel Garcia</td>
+                    <td>40</td>
+                    <td>Mexico</td>
+                    <td>Director</td>
+                    <td>$160,000</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Emily Harris</td>
+                    <td>29</td>
+                    <td>Germany</td>
+                    <td>HR Manager</td>
+                    <td>$95,000</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Lucas Walker</td>
+                    <td>23</td>
+                    <td>Brazil</td>
+                    <td>Intern</td>
+                    <td>$30,000</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Charlotte Martinez</td>
+                    <td>26</td>
+                    <td>Spain</td>
+                    <td>Sales</td>
+                    <td>$55,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

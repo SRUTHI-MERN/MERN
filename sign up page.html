@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://www.transparenttextures.com/patterns/soft-fabric-2.png');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: backgroundAnimation 5s ease infinite alternate;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        .signup-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+        }
+
+        .signup-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #f3a8b2, #d9b5f5);
+            opacity: 0.2;
+            border-radius: 12px;
+            z-index: -1;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #f3a8b2;
+        }
+
+        .form-group label {
+            position: absolute;
+            top: 0;
+            left: 15px;
+            font-size: 16px;
+            color: #666;
+            transition: 0.2s;
+            pointer-events: none;
+        }
+
+        .form-group input:focus ~ label,
+        .form-group input:not(:placeholder-shown) ~ label {
+            top: -20px;
+            left: 15px;
+            font-size: 12px;
+            color: #f3a8b2;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #f3a8b2;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #d9b5f5;
+        }
+
+        .already-account {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .already-account a {
+            color: #f3a8b2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .already-account a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <h2>Create Account</h2>
+        <form action="" method="POST" id="signupForm">
+            <div class="form-group">
+                <input type="text" name="name" id="name" placeholder=" " required>
+                <label for="name">Full Name</label>
+            </div>
+
+            <div class="form-group">
+                <input type="email" name="email" id="email" placeholder=" " required>
+                <label for="email">Email</label>
+            </div>
+
+            <div class="form-group">
+                <input type="password" name="password" id="password" placeholder=" " required>
+                <label for="password">Password</label>
+            </div>
+
+            <div class="form-group">
+                <input type="password" name="confirm-password" id="confirm-password" placeholder=" " required>
+                <label for="confirm-password">Confirm Password</label>
+            </div>
+
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+
+        <div class="already-account">
+            <p>Already have an account? <a href="file:///C:/Users/Ilangkani/Desktop/MERN/login%20page.html">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            if (name && email && password) {
+                alert("Sign Up successful!");
+            } else {
+                alert("Please fill in all the fields.");
+            }
+        });
+    </script>
+</body>
+</html>
